@@ -29,14 +29,13 @@ nav {
   font-weight: bolder;
   color: #232123;
   z-index: 1;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .left {
   li {
     font-size: 1.5rem;
-    margin-left: 2rem;
     cursor: pointer;
   }
 
@@ -63,9 +62,13 @@ nav {
   }
 
   li {
-    margin-right: 2rem;
+    margin-left: 2rem;
     cursor: pointer;
     z-index: 999;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 }
 
@@ -285,4 +288,76 @@ nav {
 
 .white_outline {
   -webkit-text-stroke: 0.1rem #fff;
+}
+
+@include respond-below(1175px) {
+  .title {
+    font-size: 8rem;
+  }
+  .sub-title {
+    width: 90%;
+  }
+}
+
+@include respond-below(887px) {
+  .title {
+    font-size: 7rem;
+  }
+  .sub-title {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .imgs {
+    grid-row: 3 / span 6;
+  }
+  .first-img {
+    height: 40rem;
+  }
+  .imgs-2 {
+    grid-row: 9 / span 2;
+    grid-column: 3 / span 4;
+  }
+  .imgs-3 {
+    grid-row: 3 / span 3;
+    grid-column: 7 / span 4;
+  }
+  .third-img {
+    height: 20rem;
+  }
+  .imgs-4 {
+    grid-row: 6 / span 5;
+    grid-column: 7 / span 4;
+  }
+  .forest img {
+    @include size(130%, 100%);
+    margin-left: -15%;
+  }
+}
+
+@include respond-below(742px) {
+  .title {
+    font-size: 5rem;
+  }
+  .sub-title {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+  .bottom-nav {
+    height: 6rem;
+    font-size: 1.3rem;
+  }
+  nav {
+    flex-direction: column;
+    font-size: 1.4rem;
+    padding-top: 2rem;
+  }
+  .middle {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .right {
+    li {
+      margin-left: 4rem;
+    }
+  }
 }
