@@ -13,7 +13,7 @@ module.exports = {
     main: ['./index.js']
   },
   output: {
-    filename: 'js/[name]-[contenthash].js',
+    filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: ''
   },
@@ -105,7 +105,7 @@ module.exports = {
   },
   plugins: [
     new MiniCSSExtractPlugin({
-      filename: 'css/[name]-[contenthash].css'
+      filename: '[name]-[contenthash].css'
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/*']
