@@ -13,7 +13,7 @@ module.exports = {
     main: ['./index.js']
   },
   output: {
-    filename: '[name]-[contenthash].js',
+    filename: 'js/[name]-[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: ''
   },
@@ -45,9 +45,6 @@ module.exports = {
               },
               gifsicle: {
                 interlaced: false
-              },
-              webp: {
-                quality: 75
               }
             }
           }
